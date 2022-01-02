@@ -1,19 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 * {
   margin: 0;
   padding: 0;
   font-family: "Maven Pro", sans-serif !important;
+  /* font-family: 'IBM Plex Mono', monospace; */
   box-sizing: border-box;
   outline: none !important;
 }
 
-body {
-  background-color: white;
+a:hover {
+  text-decoration:none !important;
 }
-
 :root {
   --primary: #0078d7;
+  --secondary: #f7f9fb;
+      --color-white: #fff;
+    --color-snow: #f4f4f4;
+    --color-smoke: #ebebeb;
+    --color-silver: #ccc;
+    --color-moon: #999;
+    --color-nickel: #555;
+    --color-coal: #333;
+    --color-jet: #222;
+    --color-midnight: #111;
+    --color-black: #000;
+    --color-light-blue: #0294e8;
+    --color-blue: #0274b6;
+    --color-dark-blue: #015483;
+    --color-light-gold: #9e855e;
+    --color-gold: #816d4d;
+    --color-dark-gold: #69583e;
+    --color-light-green: #0eb500;
+    --color-green: #0a8200;
+    --color-dark-green: #064f00;
+    --color-light-red: #ff4d4d;
+    --color-red: #e10000;
+    --color-dark-red: #ba0000;
+    --font-sans-serif: "Retina",Arial,Helvetica,sans-serif;
+    --font-sans-serif-wide: "Retina Wide","Retina",Arial,Helvetica,sans-serif;
+    --font-sans-serif-narrow: "Retina Narrow","Retina",Arial,Helvetica,sans-serif;
+    --font-serif: "Exchange",Georgia,serif;
+    --font-serif-display: "Escrow Condensed",Georgia,serif;
+
 }
 
 .container {

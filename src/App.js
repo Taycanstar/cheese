@@ -22,6 +22,14 @@ import Forgot from "./components/Auth/Forgot";
 import Reset from "./components/Auth/Reset";
 import { ProtectedRoute } from "./components/Auth/ProtectedRoute";
 import NotFound from "./components/Auth/NotFound";
+import Botbar from "./components/botbar/Botbar";
+import News from "./components/news/News";
+import Messages from "./components/messages/Messages";
+import { Notifications } from "@material-ui/icons";
+import AddPost from "./components/addNews/AddPost";
+import Profile from "./components/Profile/actualProfile/Profile";
+import Article from "./components/news/Article";
+import ArticlePreview from "./components/news/ArticlePreview";
 // import store from "./store";
 
 function App() {
@@ -33,7 +41,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="/register" component={Signup} />
           <Route path="/Login" component={Login} />
-          <ProtectedRoute path="/profile" component={EditProfile} />
+          <ProtectedRoute path="/edit-profile" component={EditProfile} />
           <ProtectedRoute path="/settings" component={Settings} />
           <ProtectedRoute path="/account" component={Account} />
           <ProtectedRoute path="/account-info" component={AccountInfo} />
@@ -57,12 +65,20 @@ function App() {
             component={FinalDeactivation}
           />
           <ProtectedRoute path="/privacy" component={Privacy} />
+          <ProtectedRoute path="/article" component={Article} />
+          <ProtectedRoute path="/article-preview" component={ArticlePreview} />
+          <ProtectedRoute path="/news" component={News} />
+          <ProtectedRoute path="/messages" component={Messages} />
+          <ProtectedRoute path="/notifications" component={Notifications} />
+          <ProtectedRoute path="/add-post" component={AddPost} />
+          <ProtectedRoute path="/profile" component={Profile} />
           <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route path="/contact-us" component={ContactUs} />
           <Route path="/forgot-password" component={Forgot} />
           <Route path="/reset-password" component={Reset} />
           <Route path="*" component={NotFound} />
         </Switch>
+        <Botbar />
       </Router>
     </div>
   );

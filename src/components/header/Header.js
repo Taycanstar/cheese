@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import logo from "../../images/header-logo.jpg";
+import blackLogo from "../../images/black-logo.png";
+import black from "../../images/black.png";
 import "../../styles/bootystrap.css";
 import "../../styles/header.css";
 import "../../../src/App.css";
@@ -49,9 +51,10 @@ const Header = (props) => {
         <div className="inner-content">
           <div className="divisible-content">
             <div className="brand" onClick={refresh}>
-              <img src={logo} alt="logo" />
+              <img className="log" src={black} alt="logo" />
+              <h3 className="log-text">Kweeble</h3>
             </div>
-            <div className="header-icons">
+            {/* <div className="header-icons">
               <ul>
                 <li className="contact-us">
                   <Link to="/contact-us">
@@ -59,7 +62,7 @@ const Header = (props) => {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
           <div className="user-content">
             <ul>
@@ -86,7 +89,7 @@ const Header = (props) => {
                         <Link to="/profile">
                           <div className="drop-item">
                             <PersonIcon />
-                            <h4 className="drop-label">Edit Profile</h4>
+                            <h4 className="drop-label">View my profile</h4>
                           </div>
                         </Link>
                       </Dropdown.Item>

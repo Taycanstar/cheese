@@ -7,6 +7,7 @@ header {
   z-index: 100;
   position: fixed;
   background-color: white;
+  
 }
 
 header .inner-content {
@@ -32,8 +33,18 @@ header a:hover {
   opacity: 0.7;
 }
 
-.brand img {
+/* .brand img {
   width: 170px;
+} */
+
+.log {
+  width: 35px;
+}
+
+.log-text {
+  padding-left: 3px;
+  padding-top: 7px;
+  font-size: 1.3rem;
 }
 
 .login-button {
@@ -41,8 +52,9 @@ header a:hover {
 }
 
 .brand {
+  display: flex;
   margin-bottom: 20px;
-  padding-top: 10px;
+  padding-top: 5px;
   padding-left: 40px;
   padding-right: 40px;
 }
@@ -57,6 +69,7 @@ header a:hover {
 @media (min-width: 1236px) {
   .brand {
     margin-left: 74px;
+    
   }
 }
 
@@ -95,6 +108,7 @@ header .MuiAvatar-root {
 .drop-data {
   display: flex;
   flex-direction: row !important;
+  
 }
 
 .btn-success {
@@ -137,6 +151,7 @@ header .MuiAvatar-root {
 
 .brand {
   cursor: pointer;
+  
 }
 
 .dropdown-toggle::after {
@@ -186,14 +201,47 @@ header .dropdown-toggle {
     background-color: #fff !important;
   }
 
+
+  .brand img {
+    width: 32px;
+    top: 20px;
+  }
+
+  header {
+    height: 45px;
+    /* border-bottom: 1px solid lightgray; */
+    top: 0;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    position: fixed;
+    background-color: white;
+  }
+
+  header .inner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0;
+    
+  }
+
   .brand {
     margin-bottom: 20px;
-    padding-top: 10px;
+    padding-top: 5px;
     padding-left: 10px;
     padding-right: 10px;
   }
 
   .contact-us {
     display: none;
+  }
+
+  .drop-label{
+    font-size: .95rem;
+  }
+
+  .drop-data {
+    padding-top: 10px;
   }
 }

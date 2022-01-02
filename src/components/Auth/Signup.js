@@ -13,10 +13,11 @@ const Signup = (props) => {
     name: "",
     email: "",
     password: "",
+    username: "",
     error: null,
   });
 
-  const { error, name, email, password } = data;
+  const { error, name, email, password, username } = data;
 
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
@@ -28,9 +29,10 @@ const Signup = (props) => {
     try {
       setData({ ...data, error: null });
       setCollege({ ...college });
+      setGender({ ...gender });
       await axios.post(
         "/auth/register",
-        { name, email, password, college },
+        { name, email, password, college, username },
         {
           headers: {
             "Content-Type": "application/json",
@@ -46,6 +48,7 @@ const Signup = (props) => {
   };
 
   const [college, setCollege] = useState([]);
+  const [gender, setGender] = useState([]);
 
   const handleShowPassword = () =>
     setShowPassword((prevShowPassword) => !prevShowPassword);
@@ -84,6 +87,14 @@ const Signup = (props) => {
             placeholder="Full Name"
             onChange={handleChange}
             value={name}
+          />
+          <input
+            className="signup-input"
+            type="text"
+            name="username"
+            placeholder="Username"
+            onChange={handleChange}
+            value={username}
           />
 
           <input
@@ -139,6 +150,24 @@ const Signup = (props) => {
               </IconButton>
             </div>
           )}
+
+          <div className="gender">
+            <label className="college-label" htmlFor="gender">
+              Gender:
+            </label>
+            <select
+              name="gender"
+              id="gender"
+              onChange={(e) => setGender(e.target.value)}
+            >
+              <option value="" selected disabled hidden>
+                Choose here
+              </option>
+              <option value="Male">Male</option>
+              <option value="Male">Female</option>
+              <option value="Male">Other</option>
+            </select>
+          </div>
 
           <div className="colleges">
             <label className="college-label" htmlFor="college">

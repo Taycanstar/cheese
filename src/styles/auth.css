@@ -236,3 +236,28 @@ a:hover {
 .notfound-btn:hover a {
   text-decoration: none;
 }
+
+
+@media (max-width:580px){
+  .notFound {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 50px;
+    text-align: center;
+    
+  }
+
+  .notFound h2 {
+  font-size: 50px;
+  color: #344048;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+.notFound h1 {
+  font-size: 100px;
+  color: #344048;
+  font-style: italic;
+}
+}
